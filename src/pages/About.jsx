@@ -104,7 +104,7 @@ export default function About() {
           </div>
           <div
             className="font-syne font-extrabold leading-[0.88] uppercase tracking-[-0.03em] text-dark"
-            style={{ fontSize: 'clamp(22px, 4vw, 64px)' }}
+            style={{ fontSize: 'clamp(32px, 7vw, 100px)' }}
           >
             About
           </div>
