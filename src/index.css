@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #eadfc4;
+  --color-dark: #0b0909;
+  --color-wine: #510113;
+  --font-syne: 'Syne', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #eadfc4;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@layer utilities {
+  .section {
+    margin-top: clamp(20px, 3.5vh, 40px);
+  }
+
+  .animate-marquee {
+    animation: marquee 22s linear infinite;
+  }
+
+  /* clip-path can't be done cleanly with Tailwind arbitrary values inside clamp() */
+  .hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 52px), calc(100% - 52px) 100%, 0 100%);
+  }
+
+  .hero-cut::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    background: #eadfc4;
+    border-top-left-radius: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-clip {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), calc(100% - 36px) 100%, 0 100%);
+    }
+    .hero-cut::after {
+      width: 36px;
+      height: 36px;
+      border-top-left-radius: 13px;
+    }
+  }
+}
