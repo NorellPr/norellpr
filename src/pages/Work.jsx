@@ -6,7 +6,7 @@ const beauty = {
   year: '2025',
   tags: ['Brand Launch', 'Media Relations', 'Influencer Strategy'],
   headline: 'Launching Luxe Skin to a continent.',
-  sub: 'A luxury product launch that made Africa's beauty industry take notice.',
+  sub: "A luxury product launch that made Africa's beauty industry take notice.",
   context:
     'Beauty by aD entered the market with their Luxe Skin Matte Wear Foundation — a premium product built to celebrate diverse skin tones across Africa and beyond. In a crowded category, they needed a debut that felt inevitable.',
   approach:
