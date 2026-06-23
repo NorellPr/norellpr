@@ -55,12 +55,11 @@ export default function Work() {
 
         {/* Momdates — col-span-2, wine card */}
         <div className="col-span-2 max-md:col-span-1 rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group cursor-pointer flex flex-col justify-between p-8">
-          {/* Logo displayed as a natural cream badge in the center */}
+          {/* Logo — natural, with dark overlay on top */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="rounded-[18px] overflow-hidden" style={{ opacity: 0.18 }}>
-              <img src={moms.logo} alt="" className="w-64 max-md:w-44 block" />
-            </div>
+            <img src={moms.logo} alt="" className="w-64 max-md:w-44 block rounded-[14px]" style={{ opacity: 0.75 }} />
           </div>
+          <div className="absolute inset-0 bg-dark/45 pointer-events-none" />
           <div className="flex items-start justify-between relative z-10">
             <div className="flex flex-wrap gap-1.5">
               {moms.tags.map((t, i) => <Tag key={i} label={t} light />)}
@@ -71,7 +70,7 @@ export default function Work() {
           </div>
           <div className="relative z-10">
             <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
-            <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1]">{moms.name}</div>
+            <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
             <div className="text-cream/50 text-[13px] mt-3 leading-[1.65] italic">{moms.sub}</div>
           </div>
         </div>
@@ -96,7 +95,7 @@ export default function Work() {
             </div>
             <div>
               <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{beauty.year}</div>
-              <div className="font-syne text-[clamp(18px,2.5vw,36px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1]">{beauty.name}</div>
+              <div className="font-syne text-[clamp(18px,2.5vw,36px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{beauty.name}</div>
               <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">Brand Launch · Africa</div>
             </div>
           </div>
