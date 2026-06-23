@@ -71,7 +71,7 @@ function Editorial() {
           <img
             src={beauty.imgCampaign}
             alt="Beauty by aD"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
           />
           <div className="absolute inset-0 bg-linear-to-t from-dark/88 via-dark/25 to-transparent" />
           <div className="absolute inset-0 p-8 flex flex-col justify-between">
@@ -94,7 +94,7 @@ function Editorial() {
         </div>
 
         {/* Momdates — wine typographic */}
-        <div className="relative rounded-[20px] bg-wine h-[78vh] max-md:h-[55vw] group cursor-pointer flex flex-col justify-between p-8 overflow-hidden">
+        <div className="relative rounded-[20px] bg-wine h-[78vh] max-md:h-[68vw] group cursor-pointer flex flex-col justify-between p-8 overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06]">
             <img src={moms.logo} alt="" className="w-[85%]" style={{ filter: 'brightness(0) invert(1)' }} />
           </div>
@@ -209,12 +209,12 @@ function CaseStudy() {
 function Grid() {
   return (
     <div className="section flex flex-col gap-2.5">
-      <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(32px,5vh,52px)] px-[clamp(28px,4vw,56px)] flex items-end justify-between">
+      <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(32px,5vh,52px)] px-[clamp(28px,4vw,56px)] flex items-end justify-between overflow-hidden">
         <div className="font-syne font-extrabold uppercase leading-[0.88] tracking-[-0.03em]">
           <div className="text-[clamp(52px,9vw,136px)] text-dark">Our</div>
           <div className="text-[clamp(52px,9vw,136px)] text-wine">Work</div>
         </div>
-        <div className="text-right">
+        <div className="text-right max-md:hidden">
           <div className="font-syne text-[clamp(40px,6vw,96px)] font-extrabold text-dark/10 leading-none">02</div>
           <div className="text-[10px] text-dark/35 tracking-widest uppercase">Projects</div>
         </div>
@@ -223,7 +223,7 @@ function Grid() {
       <div className="grid grid-cols-3 gap-2.5 max-md:grid-cols-1">
         {/* Beauty by aD — large hero card */}
         <div className="col-span-2 max-md:col-span-1 relative rounded-[20px] overflow-hidden h-[62vh] max-md:h-[65vw] group cursor-pointer">
-          <img src={beauty.imgCampaign} alt="Beauty by aD" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+          <img src={beauty.imgCampaign} alt="Beauty by aD" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
           <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
           <div className="absolute inset-0 p-8 flex flex-col justify-between">
             <div className="flex items-start justify-between">
@@ -294,11 +294,11 @@ function Classic() {
   return (
     <div className="section flex flex-col gap-2.5">
       {/* Redrick-style stacked headline */}
-      <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(28px,5vh,52px)] px-[clamp(28px,4vw,56px)]">
+      <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(28px,5vh,52px)] px-[clamp(28px,4vw,56px)] overflow-hidden">
         <div className="font-syne font-extrabold uppercase tracking-[-0.03em] leading-[0.88]">
-          <div className="text-[clamp(52px,10vw,152px)] text-dark">Case</div>
+          <div className="text-[clamp(44px,10vw,152px)] text-dark">Case</div>
           <div
-            className="text-[clamp(52px,10vw,152px)]"
+            className="text-[clamp(44px,10vw,152px)]"
             style={{ WebkitTextStroke: '2px #0b0909', color: 'transparent' }}
           >
             Studies
