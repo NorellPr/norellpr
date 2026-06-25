@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 
@@ -19,6 +19,10 @@ export default function Layout() {
   const location = useLocation()
   const toggleMenu = () => setMenuOpen(p => !p)
   const closeMenu = () => setMenuOpen(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   return (
     <>
