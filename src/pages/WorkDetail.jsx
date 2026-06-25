@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { motion } from 'motion/react'
+import { viewContainer, up, vp } from '../anim'
 
 const clients = {
   'beauty-by-ad': {
@@ -50,13 +52,7 @@ function ImageGrid({ images, name, onZoom, onMouseMove, onMouseLeave }) {
   const handlers = (src) => ({ onClick: () => onZoom(src), onMouseMove, onMouseLeave })
 
   return (
-    <div
-      style={{
-        columns: 2,
-        columnGap: '10px',
-      }}
-      className="max-md:columns-1"
-    >
+    <div style={{ columns: 2, columnGap: '10px' }} className="max-md:columns-1">
       {images.map((src, i) => (
         <div
           key={i}
@@ -88,7 +84,6 @@ export default function WorkDetail() {
   const handleImgMouseMove = (e) => setCursor({ x: e.clientX, y: e.clientY, visible: true })
   const handleImgMouseLeave = () => setCursor(c => ({ ...c, visible: false }))
 
-  // Close on Escape
   useEffect(() => {
     if (!zoomed) return
     const handler = (e) => { if (e.key === 'Escape') setZoomed(null) }
@@ -96,7 +91,6 @@ export default function WorkDetail() {
     return () => window.removeEventListener('keydown', handler)
   }, [zoomed])
 
-  // Prevent body scroll while zoomed
   useEffect(() => {
     document.body.style.overflow = zoomed ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -114,10 +108,15 @@ export default function WorkDetail() {
     <div className="mt-21.5 max-md:mt-18.5">
 
       {/* ── BREADCRUMB ── */}
-      <div className="flex items-center gap-3 mb-5 max-md:mb-4">
+      <motion.div
+        className="flex items-center gap-3 mb-5 max-md:mb-4"
+        initial={{ opacity: 0, x: -12 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <Link
           to="/work"
-          className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.1em] uppercase text-dark/40 hover:text-dark transition-colors no-underline"
+          className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase text-dark/40 hover:text-dark transition-colors no-underline"
         >
           <svg className="w-3.5 h-3.5 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="19" y1="12" x2="5" y2="12" />
@@ -127,7 +126,7 @@ export default function WorkDetail() {
         </Link>
         <span className="text-dark/20 text-[10px]">/</span>
         <span className="text-[11px] text-dark/30 tracking-[0.08em] uppercase truncate">{client.name}</span>
-      </div>
+      </motion.div>
 
       {/* ── IMAGE GRID ── */}
       <ImageGrid
@@ -155,35 +154,43 @@ export default function WorkDetail() {
       </div>
 
       {/* ── CAMPAIGN TEXT ── */}
-      <div className="section bg-cream border border-dark/8 rounded-[20px] px-[clamp(28px,4vw,64px)] py-[clamp(40px,6vh,72px)]">
+      <motion.div
+        className="section bg-cream border border-dark/8 rounded-[20px] px-[clamp(28px,4vw,64px)] py-[clamp(40px,6vh,72px)]"
+        variants={up}
+        initial="hidden"
+        whileInView="show"
+        viewport={vp}
+      >
         <h1
-          className="font-syne font-extrabold text-dark uppercase tracking-[-0.03em] leading-[1.0] mb-10 max-md:mb-8"
+          className="font-syne font-extrabold text-dark uppercase tracking-[-0.03em] leading-none mb-10 max-md:mb-8"
           style={{ fontSize: 'clamp(20px, 3vw, 44px)' }}
         >
           {client.heading}
         </h1>
 
         <div className="flex gap-16 items-start max-md:flex-col max-md:gap-10">
-          {/* Description */}
           <div className="flex-1 flex flex-col gap-5">
             {client.description.map((p, i) => (
-              <p key={i} className="text-dark/60 text-[14px] leading-[1.85] max-md:text-[13px]">
-                {p}
-              </p>
+              <p key={i} className="text-dark/60 text-[14px] leading-[1.85] max-md:text-[13px]">{p}</p>
             ))}
           </div>
 
-          {/* Metadata sidebar */}
-          <div className="shrink-0 w-52 max-md:w-full flex flex-col gap-6 max-md:flex-row max-md:flex-wrap max-md:gap-x-10 max-md:gap-y-5 pt-1">
+          <motion.div
+            className="shrink-0 w-52 max-md:w-full flex flex-col gap-6 max-md:flex-row max-md:flex-wrap max-md:gap-x-10 max-md:gap-y-5 pt-1"
+            variants={viewContainer(0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={vp}
+          >
             {client.meta.map(({ label, value }) => (
-              <div key={label}>
+              <motion.div key={label} variants={up}>
                 <div className="text-[9px] font-bold tracking-[0.16em] uppercase text-dark/50 mb-1.5">{label}</div>
                 <div className="text-[14px] text-dark font-bold leading-normal">{value}</div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* ── LIGHTBOX ── */}
       {zoomed && (

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { motion } from 'motion/react'
+import { up, vp } from '../anim'
 
 const SERVICES = [
   'Strategic Communications',
@@ -12,21 +14,14 @@ const SERVICES = [
   "I'm not sure yet",
 ]
 
-// ─── Replace this with your Formspree form ID ───────────────────────────────
-// 1. Go to formspree.io → sign up with admin@norellpr.com
-// 2. Create a new form, copy the ID (looks like: xpzgkdqb)
-// 3. Paste it below replacing YOUR_FORM_ID
 const FORMSPREE_ID = 'YOUR_FORM_ID'
-// ─────────────────────────────────────────────────────────────────────────────
 
 const INITIAL = { name: '', email: '', company: '', service: '', details: '' }
 
 function Field({ label, children }) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-[10px] font-semibold tracking-[0.14em] uppercase text-cream/40">
-        {label}
-      </label>
+      <label className="text-[10px] font-semibold tracking-[0.14em] uppercase text-cream/40">{label}</label>
       {children}
     </div>
   )
@@ -65,7 +60,12 @@ export default function Contact() {
   return (
     <>
       {/* ── HERO ── */}
-      <div className="bg-cream border border-dark/8 rounded-[20px] mt-21.5 max-md:mt-18.5 px-[clamp(28px,4vw,64px)] py-10 max-md:py-8 flex items-end justify-between gap-6 max-md:flex-col max-md:items-start max-md:gap-3">
+      <motion.div
+        className="bg-cream border border-dark/8 rounded-[20px] mt-21.5 max-md:mt-18.5 px-[clamp(28px,4vw,64px)] py-10 max-md:py-8 flex items-end justify-between gap-6 max-md:flex-col max-md:items-start max-md:gap-3"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <div className="font-syne font-extrabold uppercase tracking-[-0.03em] leading-[0.88]">
           <span className="text-dark" style={{ fontSize: 'clamp(28px, 5vw, 72px)' }}>Contact </span>
           <span className="text-wine whitespace-nowrap" style={{ fontSize: 'clamp(28px, 5vw, 72px)' }}>Norell PR</span>
@@ -73,10 +73,15 @@ export default function Contact() {
         <p className="text-dark/40 text-[13px] leading-[1.7] max-w-64 max-md:max-w-full shrink-0">
           Tell us about your brand and what you're looking to achieve.
         </p>
-      </div>
+      </motion.div>
 
       {/* ── FORM ── */}
-      <div className="section">
+      <motion.div
+        className="section"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
         <div className="bg-wine rounded-[20px] p-[clamp(28px,4vw,52px)]">
           <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 mb-10">Tell us about your project</div>
 
@@ -140,20 +145,28 @@ export default function Contact() {
                 <p className="text-[12px] text-cream/60">Something went wrong. Please try again or email us directly at admin@norellpr.com</p>
               )}
 
-              <button
+              <motion.button
                 type="submit"
                 disabled={status === 'submitting'}
+                whileTap={{ scale: 0.96 }}
+                transition={{ duration: 0.1 }}
                 className="self-start inline-flex items-center gap-3 bg-cream text-dark text-[12px] font-semibold tracking-[0.08em] uppercase py-4 px-9 rounded-full hover:bg-dark hover:text-cream transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'submitting' ? 'Sending...' : 'Send Message →'}
-              </button>
+              </motion.button>
             </form>
           )}
         </div>
-      </div>
+      </motion.div>
 
       {/* ── BOTTOM: large email CTA ── */}
-      <div className="section bg-wine rounded-[20px] py-[clamp(48px,7vh,88px)] px-[clamp(28px,4vw,56px)] flex flex-col gap-4 overflow-hidden relative">
+      <motion.div
+        className="section bg-wine rounded-[20px] py-[clamp(48px,7vh,88px)] px-[clamp(28px,4vw,56px)] flex flex-col gap-4 overflow-hidden relative"
+        variants={up}
+        initial="hidden"
+        whileInView="show"
+        viewport={vp}
+      >
         <div className="absolute -bottom-16 -right-12 opacity-[0.05] pointer-events-none">
           <svg width="320" height="320" viewBox="0 0 100 100" fill="none">
             <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
@@ -167,7 +180,7 @@ export default function Contact() {
         >
           admin@norellpr.com
         </a>
-      </div>
+      </motion.div>
     </>
   )
 }

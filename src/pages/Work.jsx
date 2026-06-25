@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
+import { heroContainer, heroItem, viewContainer, up, vp } from '../anim'
+
+const MotionLink = motion.create(Link)
 
 const beauty = {
   name: 'Beauty by aD',
@@ -40,71 +44,81 @@ export default function Work() {
 
       {/* ── HEADER ── */}
       <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(32px,5vh,52px)] px-[clamp(28px,4vw,56px)] flex items-end justify-between overflow-hidden">
-        <div className="font-syne font-extrabold uppercase leading-[0.88] tracking-[-0.03em]">
-          <div className="text-[clamp(52px,9vw,136px)] text-dark">Our</div>
-          <div className="text-[clamp(52px,9vw,136px)] text-wine">Work</div>
-        </div>
-        <div className="text-right max-md:hidden">
+        <motion.div
+          className="font-syne font-extrabold uppercase leading-[0.88] tracking-[-0.03em]"
+          variants={heroContainer}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div variants={heroItem} className="text-[clamp(52px,9vw,136px)] text-dark">Our</motion.div>
+          <motion.div variants={heroItem} className="text-[clamp(52px,9vw,136px)] text-wine">Work</motion.div>
+        </motion.div>
+        <motion.div
+          className="text-right max-md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           <div className="font-syne text-[clamp(40px,6vw,96px)] font-extrabold text-dark/10 leading-none">02</div>
           <div className="text-[10px] text-dark/35 tracking-widest uppercase">Projects</div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ── MAIN GRID ── */}
-      <div className="grid grid-cols-2 gap-2.5 max-md:grid-cols-1">
-
-        {/* Momdates — equal width */}
-        <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline">
-          <img
-            src="/momdate/momdate_campaign%20(2).jpeg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-dark/55 pointer-events-none" />
-          <div className="flex items-start justify-between relative z-10">
-            <div className="flex flex-wrap gap-1.5">
-              {moms.tags.map((t, i) => <Tag key={i} label={t} light />)}
-            </div>
-            <div className="w-8 h-8 rounded-full border border-cream/20 flex items-center justify-center shrink-0">
-              <Arrow className="w-3 h-3 stroke-cream opacity-60" />
-            </div>
-          </div>
-          <div className="relative z-10">
-            <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
-            <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
-            <div className="text-cream/50 text-[13px] mt-3 leading-[1.65] italic">{moms.sub}</div>
-          </div>
-        </Link>
-
-        {/* Beauty by aD — col-span-1, photo card */}
-        <Link to="/work/beauty-by-ad" className="relative rounded-[20px] overflow-hidden h-[62vh] max-md:h-[65vw] group no-underline">
-          <img
-            src={beauty.imgCampaign}
-            alt="Beauty by aD"
-            decoding="async"
-            fetchPriority="high"
-            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
-          <div className="absolute inset-0 bg-linear-to-b from-dark/55 to-transparent" />
-          <div className="absolute inset-0 p-7 flex flex-col justify-between">
-            <div className="flex items-start justify-between">
+      <motion.div
+        className="grid grid-cols-2 gap-2.5 max-md:grid-cols-1"
+        variants={viewContainer(0.12)}
+        initial="hidden"
+        whileInView="show"
+        viewport={vp}
+      >
+        {/* Momdates */}
+        <motion.div variants={up}>
+          <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline block">
+            <img src="/momdate/momdate_campaign%20(2).jpeg" alt=""
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
+            <div className="absolute inset-0 bg-dark/55 pointer-events-none" />
+            <div className="flex items-start justify-between relative z-10">
               <div className="flex flex-wrap gap-1.5">
-                {beauty.tags.slice(0, 2).map((t, i) => <Tag key={i} label={t} light />)}
+                {moms.tags.map((t, i) => <Tag key={i} label={t} light />)}
               </div>
-              <div className="w-8 h-8 rounded-full border border-cream/25 flex items-center justify-center shrink-0">
-                <Arrow className="w-3 h-3 stroke-cream" />
+              <div className="w-8 h-8 rounded-full border border-cream/20 flex items-center justify-center shrink-0">
+                <Arrow className="w-3 h-3 stroke-cream opacity-60" />
               </div>
             </div>
-            <div>
-              <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{beauty.year}</div>
-              <div className="font-syne text-[clamp(18px,2.5vw,36px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{beauty.name}</div>
-              <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">Brand Launch · Africa</div>
+            <div className="relative z-10">
+              <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
+              <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
+              <div className="text-cream/50 text-[13px] mt-3 leading-[1.65] italic">{moms.sub}</div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </motion.div>
 
-      </div>
+        {/* Beauty by aD */}
+        <motion.div variants={up}>
+          <Link to="/work/beauty-by-ad" className="relative rounded-[20px] overflow-hidden h-[62vh] max-md:h-[65vw] group no-underline block">
+            <img src={beauty.imgCampaign} alt="Beauty by aD" decoding="async" fetchPriority="high"
+              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
+            <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-b from-dark/55 to-transparent" />
+            <div className="absolute inset-0 p-7 flex flex-col justify-between">
+              <div className="flex items-start justify-between">
+                <div className="flex flex-wrap gap-1.5">
+                  {beauty.tags.slice(0, 2).map((t, i) => <Tag key={i} label={t} light />)}
+                </div>
+                <div className="w-8 h-8 rounded-full border border-cream/25 flex items-center justify-center shrink-0">
+                  <Arrow className="w-3 h-3 stroke-cream" />
+                </div>
+              </div>
+              <div>
+                <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{beauty.year}</div>
+                <div className="font-syne text-[clamp(18px,2.5vw,36px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{beauty.name}</div>
+                <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">Brand Launch · Africa</div>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
