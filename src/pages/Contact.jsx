@@ -75,44 +75,8 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* ── MAIN: INFO + FORM — both wine ── */}
-      <div className="section grid grid-cols-[1fr_1.8fr] gap-2.5 items-start max-md:grid-cols-1">
-
-        {/* Left — contact info */}
-        <div className="bg-wine rounded-[20px] p-[clamp(28px,4vw,52px)] flex flex-col justify-between gap-10 max-md:gap-8 sticky top-22">
-          <div>
-            <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 mb-5">Get in touch</div>
-            <a
-              href="mailto:admin@norellpr.com"
-              className="block font-syne font-extrabold text-[clamp(13px,1.4vw,18px)] text-cream uppercase tracking-[-0.01em] leading-[1.4] hover:text-cream/70 transition-colors no-underline break-all"
-            >
-              admin@norellpr.com
-            </a>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <div>
-              <div className="text-[10px] font-semibold tracking-[0.14em] uppercase text-cream/35 mb-2">Based in</div>
-              <div className="text-[14px] text-cream/65 leading-[1.7]">Lagos, Nigeria</div>
-            </div>
-            <div>
-              <div className="text-[10px] font-semibold tracking-[0.14em] uppercase text-cream/35 mb-2">Services</div>
-              <div className="text-[14px] text-cream/65 leading-[1.7]">
-                PR · Communications<br />Brand Strategy · Media
-              </div>
-            </div>
-          </div>
-
-          <div className="pt-6 border-t border-cream/10">
-            <div className="text-[10px] font-semibold tracking-[0.14em] uppercase text-cream/35 mb-3">Follow</div>
-            <div className="flex gap-4">
-              <a href="#" className="text-[12px] text-cream/50 hover:text-cream transition-colors no-underline tracking-widest uppercase">IG</a>
-              <a href="#" className="text-[12px] text-cream/50 hover:text-cream transition-colors no-underline tracking-widest uppercase">LI</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Right — form */}
+      {/* ── FORM ── */}
+      <div className="section">
         <div className="bg-wine rounded-[20px] p-[clamp(28px,4vw,52px)]">
           <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 mb-10">Tell us about your project</div>
 

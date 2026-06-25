@@ -51,10 +51,10 @@ export default function Work() {
       </div>
 
       {/* ── MAIN GRID ── */}
-      <div className="grid grid-cols-3 gap-2.5 max-md:grid-cols-1">
+      <div className="grid grid-cols-2 gap-2.5 max-md:grid-cols-1">
 
-        {/* Momdates — col-span-2, wine card */}
-        <Link to="/work/momdates" className="col-span-2 max-md:col-span-1 rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline">
+        {/* Momdates — equal width */}
+        <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline">
           {/* Logo — natural, with dark overlay on top */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <img src={moms.logo} alt="" className="w-64 max-md:w-44 block rounded-[14px]" style={{ opacity: 0.75 }} />
@@ -102,31 +102,6 @@ export default function Work() {
             </div>
           </div>
         </Link>
-
-        {/* Portrait — col-span-1 */}
-        <div className="relative rounded-[20px] overflow-hidden h-64 group cursor-pointer">
-          <img
-            src={beauty.img}
-            alt="Beauty by aD portrait"
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            style={{ objectPosition: 'center 25%' }}
-          />
-          <div className="absolute inset-0 bg-dark/40" />
-          <div className="absolute bottom-5 left-5">
-            <div className="font-syne text-cream font-bold text-sm uppercase">Campaign Portrait</div>
-            <div className="text-[10px] text-cream/40 tracking-widest uppercase">Beauty by aD</div>
-          </div>
-        </div>
-
-        {/* Coming soon — col-span-2 */}
-        <div className="col-span-2 max-md:col-span-1 bg-wine rounded-[20px] h-64 px-8 py-7 flex flex-col justify-between">
-          <div className="text-cream/35 text-[10px] tracking-[0.16em] uppercase">In Progress</div>
-          <div className="font-syne text-cream font-extrabold text-[clamp(18px,3vw,38px)] uppercase leading-[1.05] tracking-[-0.02em]">
-            More work coming.<br />We're just getting started.
-          </div>
-        </div>
 
       </div>
     </div>

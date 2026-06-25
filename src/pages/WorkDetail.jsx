@@ -65,26 +65,31 @@ function ImageGrid({ images, isLogo, name, onZoom, onMouseMove, onMouseLeave }) 
     )
   }
 
+  // Full natural height — no cropping
+  const fullImgCls = 'w-full h-auto block transition-transform duration-500 hover:scale-[1.02]'
+
   return (
     <div className="flex flex-col gap-2.5">
-      <div className={`${wrapCls} h-[60vh] max-md:h-[58vw]`} {...handlers(images[0])}>
-        <img src={images[0]} alt={name} fetchPriority="high" decoding="async" className={imgCls} />
+      {/* People images side by side */}
+      <div className="grid grid-cols-2 gap-2.5 items-start max-md:grid-cols-1">
+        <div className={wrapCls} {...handlers(images[0])}>
+          <img src={images[0]} alt={name} fetchPriority="high" decoding="async" className={fullImgCls} />
+        </div>
+        {images[1] && (
+          <div className={wrapCls} {...handlers(images[1])}>
+            <img src={images[1]} alt={name} loading="lazy" decoding="async" className={fullImgCls} />
+          </div>
+        )}
       </div>
 
-      {images.length >= 3 && (
-        <div className="grid grid-cols-[1.4fr_1fr] gap-2.5 max-md:grid-cols-1">
-          <div className={`${wrapCls} h-[48vh] max-md:h-[52vw]`} {...handlers(images[1])}>
-            <img src={images[1]} alt={name} loading="lazy" decoding="async" className={imgCls} />
-          </div>
-          <div className={`${wrapCls} h-[48vh] max-md:h-[52vw]`} {...handlers(images[2])}>
-            <img src={images[2]} alt={name} loading="lazy" decoding="async" className={`${imgCls} object-top`} />
-          </div>
-        </div>
-      )}
-
-      {images[3] && (
-        <div className={`${wrapCls} h-[55vh] max-md:h-[58vw]`} {...handlers(images[3])}>
-          <img src={images[3]} alt={name} loading="lazy" decoding="async" className={imgCls} />
+      {/* Remaining images */}
+      {images.length > 2 && (
+        <div className="grid grid-cols-2 gap-2.5 items-start max-md:grid-cols-1">
+          {images.slice(2).map((src, i) => (
+            <div key={i} className={wrapCls} {...handlers(src)}>
+              <img src={src} alt={name} loading="lazy" decoding="async" className={fullImgCls} />
+            </div>
+          ))}
         </div>
       )}
     </div>
