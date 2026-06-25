@@ -190,7 +190,7 @@ export default function About() {
             <motion.div
               key={i}
               variants={left}
-              className="group flex items-start gap-6 py-[clamp(20px,3vh,28px)] border-b border-cream/7 first:border-t first:border-cream/7 cursor-pointer max-md:gap-4"
+              className="group flex items-start gap-6 py-[clamp(20px,3vh,28px)] border-b border-cream/7 first:border-t first:border-cream/7 max-md:gap-4"
             >
               <span className="font-syne text-[11px] text-cream/20 tracking-[0.06em] min-w-9 pt-1.25 shrink-0">{s.num}</span>
               <div className="flex-1 grid grid-cols-[1fr_1.4fr] gap-8 items-start max-md:grid-cols-1 max-md:gap-1">

@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, left, vp } from '../anim'
+
+const MotionLink = motion.create(Link)
 
 const ServiceItem = ({ num, name }) => (
   <motion.div variants={left} className="group flex items-center justify-between py-5.5 border-b border-cream/7 first:border-t first:border-t-cream/7 cursor-pointer">
@@ -122,9 +125,9 @@ export default function Home() {
           transition={{ duration: 0.4 }}
         >
           <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-wine/60">Featured Work</div>
-          <a href="#" className="text-[11px] font-semibold text-wine no-underline tracking-[0.08em] uppercase border-b border-wine/30 pb-0.5 transition-opacity hover:opacity-60">
+          <Link to="/work" className="text-[11px] font-semibold text-wine no-underline tracking-[0.08em] uppercase border-b border-wine/30 pb-0.5 transition-opacity hover:opacity-60">
             View all work →
-          </a>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -135,7 +138,7 @@ export default function Home() {
           viewport={vp}
         >
           {/* Card 1 — BeautybyAD */}
-          <motion.div variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 cursor-pointer">
+          <MotionLink to="/work/beauty-by-ad" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
             <img src="/beautybyAD/PTP08180-Recovered-Recovered.jpg" alt="BeautybyAD" fetchPriority="high" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
@@ -149,10 +152,10 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-          </motion.div>
+          </MotionLink>
 
           {/* Card 2 — MomDates */}
-          <motion.div variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 cursor-pointer">
+          <MotionLink to="/work/momdates" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
             <img src="/momdate/momdate_campaign%20(3).jpeg" alt="MomDates" loading="lazy" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
@@ -166,7 +169,7 @@ export default function Home() {
                 </svg>
               </div>
             </div>
-          </motion.div>
+          </MotionLink>
         </motion.div>
       </div>
 
@@ -205,9 +208,9 @@ export default function Home() {
             <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 mb-[9px]">What we do</div>
             <div className="font-syne text-[clamp(22px,3vw,40px)] font-extrabold text-cream leading-[1.1] uppercase tracking-[-0.02em]">Services</div>
           </div>
-          <a href="#" className="text-[11px] font-medium text-cream/45 no-underline tracking-[0.06em] uppercase border-b border-cream/20 pb-0.5 transition-opacity hover:opacity-100 whitespace-nowrap self-end">
+          <Link to="/about" className="text-[11px] font-medium text-cream/45 no-underline tracking-[0.06em] uppercase border-b border-cream/20 pb-0.5 transition-opacity hover:opacity-100 whitespace-nowrap self-end">
             View all services →
-          </a>
+          </Link>
         </motion.div>
         <motion.div className="flex flex-col" variants={viewContainer(0.07)} initial="hidden" whileInView="show" viewport={vp}>
           <ServiceItem num="01" name="Strategic Communications" />
