@@ -20,3 +20,15 @@ export default function LogoMark({ size = 20, color = '#510113', opacity = 1, cl
     />
   )
 }
+
+export function LogoFull({ variant = 'dark', height = 28, className = '' }) {
+  const src = variant === 'dark' ? '/logo-dark.svg' : '/logo-light.svg'
+  return (
+    <img
+      src={src}
+      alt="Norell PR"
+      style={{ height, width: 'auto', display: 'block' }}
+      className={className}
+    />
+  )
+}

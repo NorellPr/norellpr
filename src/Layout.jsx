@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import LogoMark from './components/LogoMark'
+import LogoMark, { LogoFull } from './components/LogoMark'
 
 const navLinkClass =
   'font-syne text-[clamp(28px,5.5vw,58px)] font-extrabold text-cream no-underline tracking-[-0.02em] uppercase transition-opacity duration-200 hover:opacity-50'
@@ -61,9 +61,8 @@ export default function Layout() {
 
       {/* Sticky top navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-5.5 px-8 bg-cream/92 backdrop-blur-md max-md:py-4.5 max-md:px-3.5">
-        <Link to="/" className="flex items-center gap-2.25 no-underline">
-          <LogoMark size={22} color="#510113" />
-          <span className="font-syne text-[13px] font-bold text-wine tracking-[0.08em] uppercase">Norell PR</span>
+        <Link to="/" className="flex items-center no-underline">
+          <LogoFull variant="light" height={28} />
         </Link>
 
         <button className="bg-transparent border-none cursor-pointer flex flex-col gap-1.5 p-1" onClick={toggleMenu}>
