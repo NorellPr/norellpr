@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { up, vp } from '../anim'
+import LogoMark from '../components/LogoMark'
 
 const SERVICES = [
   'Strategic Communications',
@@ -167,11 +168,7 @@ export default function Contact() {
         whileInView="show"
         viewport={vp}
       >
-        <div className="absolute -bottom-16 -right-12 opacity-[0.05] pointer-events-none">
-          <svg width="320" height="320" viewBox="0 0 100 100" fill="none">
-            <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-          </svg>
-        </div>
+        <LogoMark size={320} color="#eadfc4" opacity={0.05} className="absolute -bottom-16 -right-12 pointer-events-none" />
         <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 relative z-10">Or just say hello</div>
         <a
           href="mailto:admin@norellpr.com"

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, left, vp } from '../anim'
+import LogoMark from '../components/LogoMark'
 
 const MotionLink = motion.create(Link)
 
@@ -44,14 +45,8 @@ export default function About() {
     <>
       {/* ── SECTION 1: HERO ─────────────────────────────────── */}
       <div className="relative h-screen bg-cream border border-dark/8 rounded-[20px] flex flex-col justify-between pt-21.5 pb-10 px-[clamp(28px,4vw,64px)] max-md:h-[78vh] max-md:justify-end max-md:pb-[10vh]">
-        <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
-            <svg width="620" height="620" viewBox="0 0 100 100" fill="none" className="max-md:w-72 max-md:h-72">
-              <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#510113" />
-              <path d="M22 22 L46 47 L22 72" stroke="#510113" strokeWidth="3" fill="none" />
-              <path d="M78 22 L54 47 L78 72" stroke="#510113" strokeWidth="3" fill="none" />
-            </svg>
-          </div>
+        <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none flex items-center justify-center">
+          <LogoMark size={620} color="#510113" opacity={0.06} className="max-md:w-72! max-md:h-72!" />
         </div>
 
         <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-dark/35 relative z-10 max-md:hidden">
@@ -248,11 +243,7 @@ export default function About() {
         whileInView="show"
         viewport={vp}
       >
-        <div className="absolute -bottom-15 -right-12.5 opacity-[0.05] pointer-events-none">
-          <svg width="320" height="320" viewBox="0 0 100 100" fill="none">
-            <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-          </svg>
-        </div>
+        <LogoMark size={320} color="#eadfc4" opacity={0.05} className="absolute -bottom-15 -right-12.5 pointer-events-none" />
         <div className="font-syne text-[clamp(22px,3.5vw,48px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1.1] max-w-140 relative z-10">
           Ready to build your influence?
         </div>

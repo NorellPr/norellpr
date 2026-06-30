@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, left, vp } from '../anim'
+import LogoMark from '../components/LogoMark'
 
 const MotionLink = motion.create(Link)
 
@@ -79,9 +80,7 @@ export default function Home() {
         <div className="bg-wine rounded-[20px] py-[clamp(36px,5.5vh,64px)] px-[clamp(28px,4vw,60px)] grid grid-cols-2 gap-12 items-start relative overflow-hidden max-md:grid-cols-1 max-md:gap-6">
           <div>
             <div className="flex items-center gap-2 mb-5">
-              <svg width="14" height="14" viewBox="0 0 100 100" fill="none">
-                <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-              </svg>
+              <LogoMark size={14} color="#eadfc4" opacity={0.6} />
               <span className="font-syne text-[11px] font-bold text-cream/40 tracking-[0.1em] uppercase">Norell PR</span>
             </div>
             <div className="text-[10px] tracking-[0.14em] uppercase text-cream/45 mb-3">The Norell Approach</div>
@@ -105,13 +104,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="absolute bottom-[-50px] right-[-50px] opacity-[0.04] pointer-events-none max-md:hidden">
-            <svg width="320" height="320" viewBox="0 0 100 100" fill="none">
-              <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-              <path d="M22 22 L46 47 L22 72" stroke="#eadfc4" strokeWidth="3" fill="none" />
-              <path d="M78 22 L54 47 L78 72" stroke="#eadfc4" strokeWidth="3" fill="none" />
-            </svg>
-          </div>
+          <LogoMark size={320} color="#eadfc4" opacity={0.04} className="absolute -bottom-12.5 -right-12.5 pointer-events-none max-md:hidden" />
         </div>
       </motion.div>
 
@@ -228,11 +221,7 @@ export default function Home() {
         whileInView="show"
         viewport={vp}
       >
-        <div className="opacity-[0.05] absolute top-[-60px] left-1/2 -translate-x-1/2 pointer-events-none">
-          <svg width="400" height="400" viewBox="0 0 100 100" fill="none">
-            <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-          </svg>
-        </div>
+        <LogoMark size={400} color="#eadfc4" opacity={0.05} className="absolute -top-15 left-1/2 -translate-x-1/2 pointer-events-none" />
         <div className="font-syne text-[80px] text-cream/[0.12] leading-[0.8] self-start">"</div>
         <div className="font-syne text-[clamp(17px,2.3vw,32px)] font-bold text-cream leading-[1.35] tracking-[-0.01em] max-w-[660px] relative z-[2]">
           Working with Norell PR gave our brand the clarity and visibility we had been missing. They don't just tell your story — they make sure the right people hear it.

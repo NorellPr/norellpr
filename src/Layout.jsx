@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
+import LogoMark from './components/LogoMark'
 
 const navLinkClass =
   'font-syne text-[clamp(28px,5.5vw,58px)] font-extrabold text-cream no-underline tracking-[-0.02em] uppercase transition-opacity duration-200 hover:opacity-50'
@@ -61,11 +62,7 @@ export default function Layout() {
       {/* Sticky top navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-5.5 px-8 bg-cream/92 backdrop-blur-md max-md:py-4.5 max-md:px-3.5">
         <Link to="/" className="flex items-center gap-2.25 no-underline">
-          <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
-            <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#510113" />
-            <path d="M22 22 L46 47 L22 72" stroke="#510113" strokeWidth="3" fill="none" opacity="0.35" />
-            <path d="M78 22 L54 47 L78 72" stroke="#510113" strokeWidth="3" fill="none" opacity="0.35" />
-          </svg>
+          <LogoMark size={22} color="#510113" />
           <span className="font-syne text-[13px] font-bold text-wine tracking-[0.08em] uppercase">Norell PR</span>
         </Link>
 
@@ -131,9 +128,7 @@ export default function Layout() {
             <span className="text-[10px] text-cream/20 tracking-[0.07em] uppercase">
               © 2026 Norell PR. All rights reserved.
             </span>
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" className="opacity-[0.12]">
-              <path d="M50 2 L54 44 L96 50 L54 56 L50 98 L46 56 L4 50 L46 44 Z" fill="#eadfc4" />
-            </svg>
+            <LogoMark size={28} color="#eadfc4" opacity={0.12} />
           </div>
         </footer>
       </div>
