@@ -98,14 +98,14 @@ export default function WorkDetail() {
 
   if (!client) {
     return (
-      <div className="mt-21.5 max-md:mt-18.5 flex items-center justify-center h-64">
+      <div className="mt-30 max-md:mt-29 flex items-center justify-center h-64">
         <Link to="/work" className="text-dark/50 hover:text-dark text-sm no-underline">← Back to Work</Link>
       </div>
     )
   }
 
   return (
-    <div className="mt-21.5 max-md:mt-18.5">
+    <div className="mt-30 max-md:mt-29">
 
       {/* ── BREADCRUMB ── */}
       <motion.div

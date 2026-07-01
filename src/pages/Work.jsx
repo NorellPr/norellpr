@@ -40,7 +40,7 @@ function Tag({ label, light }) {
 
 export default function Work() {
   return (
-    <div className="mt-21.5 max-md:mt-18.5 flex flex-col gap-2.5">
+    <div className="mt-30 max-md:mt-29 flex flex-col gap-2.5">
 
       {/* ── HEADER ── */}
       <div className="bg-cream border border-dark/8 rounded-[20px] py-[clamp(32px,5vh,52px)] px-[clamp(28px,4vw,56px)] flex items-end justify-between overflow-hidden">

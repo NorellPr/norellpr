@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, left, vp } from '../anim'
-import LogoMark from '../components/LogoMark'
+import LogoMark, { LogoFull } from '../components/LogoMark'
 
 const MotionLink = motion.create(Link)
 
@@ -44,9 +44,9 @@ export default function About() {
   return (
     <>
       {/* ── SECTION 1: HERO ─────────────────────────────────── */}
-      <div className="relative h-screen bg-cream border border-dark/8 rounded-[20px] flex flex-col justify-between pt-21.5 pb-10 px-[clamp(28px,4vw,64px)] max-md:h-[78vh] max-md:justify-end max-md:pb-[10vh]">
+      <div className="relative h-screen bg-cream border border-dark/8 rounded-[20px] flex flex-col justify-between pt-30 max-md:pt-29 pb-10 px-[clamp(28px,4vw,64px)] max-md:h-[78vh] max-md:justify-end max-md:pb-[10vh]">
         <div className="absolute inset-0 rounded-[20px] overflow-hidden pointer-events-none flex items-center justify-center">
-          <LogoMark size={620} color="#510113" opacity={0.06} className="max-md:w-72! max-md:h-72!" />
+          <LogoMark variant="light" size={620} opacity={0.06} className="max-md:w-72! max-md:h-72!" />
         </div>
 
         <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-dark/35 relative z-10 max-md:hidden">
@@ -243,7 +243,7 @@ export default function About() {
         whileInView="show"
         viewport={vp}
       >
-        <LogoMark size={320} color="#eadfc4" opacity={0.05} className="absolute -bottom-15 -right-12.5 pointer-events-none" />
+        <LogoMark variant="dark" size={320} opacity={0.05} className="absolute -bottom-15 -right-12.5 pointer-events-none" />
         <div className="font-syne text-[clamp(22px,3.5vw,48px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1.1] max-w-140 relative z-10">
           Ready to build your influence?
         </div>

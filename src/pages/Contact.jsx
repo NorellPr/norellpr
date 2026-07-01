@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { up, vp } from '../anim'
-import LogoMark from '../components/LogoMark'
+import LogoMark, { LogoFull } from '../components/LogoMark'
 
 const SERVICES = [
   'Strategic Communications',
@@ -62,7 +62,7 @@ export default function Contact() {
     <>
       {/* ── HERO ── */}
       <motion.div
-        className="bg-cream border border-dark/8 rounded-[20px] mt-21.5 max-md:mt-18.5 px-[clamp(28px,4vw,64px)] py-10 max-md:py-8 flex items-end justify-between gap-6 max-md:flex-col max-md:items-start max-md:gap-3"
+        className="bg-cream border border-dark/8 rounded-[20px] mt-30 max-md:mt-29 px-[clamp(28px,4vw,64px)] py-10 max-md:py-8 flex items-end justify-between gap-6 max-md:flex-col max-md:items-start max-md:gap-3"
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -168,7 +168,7 @@ export default function Contact() {
         whileInView="show"
         viewport={vp}
       >
-        <LogoMark size={320} color="#eadfc4" opacity={0.05} className="absolute -bottom-16 -right-12 pointer-events-none" />
+        <LogoMark variant="dark" size={320} opacity={0.05} className="absolute -bottom-16 -right-12 pointer-events-none" />
         <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-cream/35 relative z-10">Or just say hello</div>
         <a
           href="mailto:admin@norellpr.com"

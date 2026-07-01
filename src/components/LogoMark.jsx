@@ -1,33 +1,26 @@
-export default function LogoMark({ size = 20, color = '#510113', opacity = 1, className = '' }) {
+// star mark only (textured 8-point star, no wordmark)
+export default function LogoMark({ variant = 'dark', size = 20, opacity = 1, className = '' }) {
+  const src = variant === 'dark' ? '/star-dark.svg' : '/star-light.svg'
   return (
-    <div
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      style={{ width: size, height: size, opacity, display: 'block', flexShrink: 0 }}
       className={className}
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: color,
-        opacity,
-        WebkitMaskImage: 'url(/logo.png)',
-        maskImage: 'url(/logo.png)',
-        WebkitMaskSize: 'contain',
-        maskSize: 'contain',
-        WebkitMaskRepeat: 'no-repeat',
-        maskRepeat: 'no-repeat',
-        WebkitMaskPosition: 'center',
-        maskPosition: 'center',
-        flexShrink: 0,
-      }}
     />
   )
 }
 
-export function LogoFull({ variant = 'dark', height = 28, className = '' }) {
+// full wordmark (star mark + "NORELL PR" text)
+export function LogoFull({ variant = 'dark', height = 28, width = 'auto', opacity = 1, className = '' }) {
   const src = variant === 'dark' ? '/logo-dark.svg' : '/logo-light.svg'
   return (
     <img
       src={src}
       alt="Norell PR"
-      style={{ height, width: 'auto', display: 'block' }}
+      aria-hidden={opacity < 1 ? 'true' : undefined}
+      style={{ height, width, opacity, display: 'block', flexShrink: 0 }}
       className={className}
     />
   )

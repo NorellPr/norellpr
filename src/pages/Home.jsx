@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, left, vp } from '../anim'
-import LogoMark from '../components/LogoMark'
+import LogoMark, { LogoFull } from '../components/LogoMark'
 
 const MotionLink = motion.create(Link)
 
@@ -44,9 +44,10 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <div className="grid grid-cols-[1fr_150px] grid-rows-[110px_1fr] gap-2.5 h-[95vh] pt-21.5 max-md:grid-cols-1 max-md:grid-rows-[1fr_68px] max-md:h-auto max-md:min-h-[85vh]">
-        <div className="[grid-column:1] [grid-row:1/3] relative max-md:[grid-row:1] max-md:min-h-[300px]">
-          <div className="absolute inset-0 bg-cream rounded-[20px] hero-clip" />
+      <div className="grid grid-cols-[1fr_150px] grid-rows-[110px_1fr] gap-2.5 h-[95vh] pt-30 max-md:pt-29 max-md:grid-cols-1 max-md:grid-rows-[1fr_68px] max-md:h-auto max-md:min-h-[85vh]">
+        <div className="[grid-column:1] [grid-row:1/3] relative overflow-hidden rounded-[20px] max-md:[grid-row:1] max-md:min-h-[300px]">
+          <div className="absolute inset-0 bg-cream hero-clip" />
+          <LogoMark variant="light" size={480} opacity={0.05} className="absolute -bottom-20 -right-20 pointer-events-none z-2 max-md:size-60 max-md:-bottom-10 max-md:-right-10" />
           <div className="absolute bottom-0 right-0 w-[52px] h-[52px] overflow-hidden z-[5] pointer-events-none hero-cut max-md:w-9 max-md:h-9" />
           <motion.div
             className="relative z-3 h-full py-[clamp(28px,4.5vh,60px)] px-[clamp(28px,3.5vw,64px)] flex flex-col justify-center gap-4.5 max-md:py-5.5 max-md:px-5 max-md:pb-7"
@@ -79,9 +80,8 @@ export default function Home() {
       <motion.div className="section" variants={up} initial="hidden" whileInView="show" viewport={vp}>
         <div className="bg-wine rounded-[20px] py-[clamp(36px,5.5vh,64px)] px-[clamp(28px,4vw,60px)] grid grid-cols-2 gap-12 items-start relative overflow-hidden max-md:grid-cols-1 max-md:gap-6">
           <div>
-            <div className="flex items-center gap-2 mb-5">
-              <LogoMark size={14} color="#eadfc4" opacity={0.6} />
-              <span className="font-syne text-[11px] font-bold text-cream/40 tracking-[0.1em] uppercase">Norell PR</span>
+            <div className="mb-5">
+              <LogoFull variant="dark" height={16} opacity={0.5} />
             </div>
             <div className="text-[10px] tracking-[0.14em] uppercase text-cream/45 mb-3">The Norell Approach</div>
             <div className="font-syne text-[clamp(18px,2.2vw,32px)] font-extrabold text-cream leading-[1.2] uppercase">
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <LogoMark size={320} color="#eadfc4" opacity={0.04} className="absolute -bottom-12.5 -right-12.5 pointer-events-none max-md:hidden" />
+          <LogoMark variant="dark" size={320} opacity={0.04} className="absolute -bottom-12.5 -right-12.5 pointer-events-none max-md:hidden" />
         </div>
       </motion.div>
 
@@ -221,7 +221,7 @@ export default function Home() {
         whileInView="show"
         viewport={vp}
       >
-        <LogoMark size={400} color="#eadfc4" opacity={0.05} className="absolute -top-15 left-1/2 -translate-x-1/2 pointer-events-none" />
+        <LogoMark variant="dark" size={400} opacity={0.05} className="absolute -top-15 left-1/2 -translate-x-1/2 pointer-events-none" />
         <div className="font-syne text-[80px] text-cream/[0.12] leading-[0.8] self-start">"</div>
         <div className="font-syne text-[clamp(17px,2.3vw,32px)] font-bold text-cream leading-[1.35] tracking-[-0.01em] max-w-[660px] relative z-[2]">
           Working with Norell PR gave our brand the clarity and visibility we had been missing. They don't just tell your story — they make sure the right people hear it.

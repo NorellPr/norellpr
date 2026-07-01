@@ -33,6 +33,10 @@ export default function Layout() {
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
+        <div className="absolute top-9 left-15">
+          <LogoFull variant="dark" height={44} />
+        </div>
+
         <button
           className="absolute top-9 right-10 bg-transparent border-none cursor-pointer flex flex-col gap-1.25 p-0"
           onClick={closeMenu}
@@ -60,9 +64,9 @@ export default function Layout() {
       </div>
 
       {/* Sticky top navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-5.5 px-8 bg-cream/92 backdrop-blur-md max-md:py-4.5 max-md:px-3.5">
+      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-8 bg-cream/92 backdrop-blur-md max-md:py-3.5 max-md:px-3.5">
         <Link to="/" className="flex items-center no-underline">
-          <LogoFull variant="light" height={28} />
+          <LogoFull variant="light" height={88} />
         </Link>
 
         <button className="bg-transparent border-none cursor-pointer flex flex-col gap-1.5 p-1" onClick={toggleMenu}>
@@ -127,7 +131,7 @@ export default function Layout() {
             <span className="text-[10px] text-cream/20 tracking-[0.07em] uppercase">
               © 2026 Norell PR. All rights reserved.
             </span>
-            <LogoMark size={28} color="#eadfc4" opacity={0.12} />
+            <LogoFull variant="dark" height={44} opacity={0.35} />
           </div>
         </footer>
       </div>
