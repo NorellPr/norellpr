@@ -47,7 +47,7 @@ export default function Home() {
       <div className="grid grid-cols-[1fr_150px] grid-rows-[110px_1fr] gap-2.5 h-[95vh] pt-30 max-md:pt-29 max-md:grid-cols-1 max-md:grid-rows-[1fr_68px] max-md:h-auto max-md:min-h-[85vh]">
         <div className="[grid-column:1] [grid-row:1/3] relative overflow-hidden rounded-[20px] max-md:[grid-row:1] max-md:min-h-[300px]">
           <div className="absolute inset-0 bg-cream hero-clip" />
-          <LogoMark variant="light" size={480} opacity={0.05} className="absolute -bottom-20 -right-20 pointer-events-none z-2 max-md:size-60 max-md:-bottom-10 max-md:-right-10" />
+          <LogoMark variant="light" size={480} opacity={0.05} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-2 max-md:size-60" />
           <div className="absolute bottom-0 right-0 w-[52px] h-[52px] overflow-hidden z-[5] pointer-events-none hero-cut max-md:w-9 max-md:h-9" />
           <motion.div
             className="relative z-3 h-full py-[clamp(28px,4.5vh,60px)] px-[clamp(28px,3.5vw,64px)] flex flex-col justify-center gap-4.5 max-md:py-5.5 max-md:px-5 max-md:pb-7"
