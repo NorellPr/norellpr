@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { heroContainer, heroItem, viewContainer, up, vp } from '../anim'
-import LogoMark from '../components/LogoMark'
 
 const MotionLink = motion.create(Link)
 
@@ -63,7 +62,6 @@ export default function Work() {
           <div className="font-syne text-[clamp(40px,6vw,96px)] font-extrabold text-dark/10 leading-none">02</div>
           <div className="text-[10px] text-dark/35 tracking-widest uppercase">Projects</div>
         </motion.div>
-        <LogoMark variant="light" size={180} opacity={0.06} className="absolute -bottom-8 -right-8 pointer-events-none max-md:hidden" />
       </div>
 
       {/* ── MAIN GRID ── */}
