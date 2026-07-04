@@ -8,8 +8,8 @@ const clients = {
     name: 'Beauty by aD',
     heading: 'BeautybyAD – Luxe Matte Wear Foundation Launch',
     images: [
-      '/beautybyAD/PTP08180-Recovered-Recovered.jpg',
-      '/beautybyAD/PTP08250.jpg',
+      '/beautybyAD/PTP08180-Recovered-Recovered.webp',
+      '/beautybyAD/PTP08250.webp',
     ],
     description: [
       'The Luxe Matte Wear Foundation launch was a comprehensive beauty campaign designed to introduce BeautybyAD\'s newest complexion product to the market through high-impact visual storytelling, strategic influencer engagement, and widespread product seeding. The campaign combined a large-scale production shoot with an extensive earned media strategy to position the foundation as a must-have beauty product across key markets.',
@@ -27,12 +27,12 @@ const clients = {
     name: 'Momdates',
     heading: 'MomDates – Scents & Stories',
     images: [
-      '/momdate/momdate_campaign%20(1).jpeg',
-      '/momdate/momdate_campaign%20(2).jpeg',
-      '/momdate/momdate_campaign%20(3).jpeg',
-      '/momdate/momdate_campaign%20(4).jpeg',
-      '/momdate/momdate_campaign%20(5).jpeg',
-      '/momdate/momdate_campaign%20(6).jpeg',
+      '/momdate/momdate_campaign%20(1).webp',
+      '/momdate/momdate_campaign%20(2).webp',
+      '/momdate/momdate_campaign%20(3).webp',
+      '/momdate/momdate_campaign%20(4).webp',
+      '/momdate/momdate_campaign%20(5).webp',
+      '/momdate/momdate_campaign%20(6).webp',
     ],
     description: [
       'Scents & Stories was an intimate MomDates experience created to celebrate mothers through a thoughtfully curated afternoon of connection, self-care, and indulgence. Designed as a rare opportunity for mothers to step away from the demands of everyday life, the event provided a dedicated space where they could simply be cared for, connect with other women, and enjoy a moment that was entirely their own.',

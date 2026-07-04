@@ -9,8 +9,8 @@ const beauty = {
   year: '2025',
   tags: ['Brand Launch', 'Media Relations', 'Influencer Strategy'],
   sub: "A luxury product launch that made Africa's beauty industry take notice.",
-  img: '/beautybyAD/PTP08250.jpg',
-  imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.jpg',
+  img: '/beautybyAD/PTP08250.webp',
+  imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.webp',
 }
 
 const moms = {
@@ -75,7 +75,7 @@ export default function Work() {
         {/* Momdates */}
         <motion.div variants={up}>
           <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline block">
-            <img src="/momdate/momdate_campaign%20(2).jpeg" alt=""
+            <img src="/momdate/momdate_campaign%20(2).webp" alt=""
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
             <div className="absolute inset-0 bg-dark/55 pointer-events-none" />
             <div className="flex items-start justify-between relative z-10">

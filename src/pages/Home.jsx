@@ -133,7 +133,7 @@ export default function Home() {
         >
           {/* Card 1 — MomDates */}
           <MotionLink to="/work/momdates" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
-            <img src="/momdate/momdate_campaign%20(3).jpeg" alt="MomDates" fetchPriority="high" decoding="async"
+            <img src="/momdate/momdate_campaign%20(3).webp" alt="MomDates" fetchPriority="high" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
             <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100 flex flex-col justify-end p-7">
@@ -150,7 +150,7 @@ export default function Home() {
 
           {/* Card 2 — BeautybyAD */}
           <MotionLink to="/work/beauty-by-ad" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
-            <img src="/beautybyAD/PTP08180-Recovered-Recovered.jpg" alt="BeautybyAD" loading="lazy" decoding="async"
+            <img src="/beautybyAD/PTP08180-Recovered-Recovered.webp" alt="BeautybyAD" loading="lazy" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
             <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100 flex flex-col justify-end p-7">
