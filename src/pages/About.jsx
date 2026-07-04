@@ -36,7 +36,7 @@ const services = [
 
 const promises = [
   { title: 'Insight-Driven', body: 'We root every strategy in research and deep understanding of your brand, your audience, and the landscape you operate in.' },
-  { title: 'Culture-Led', body: 'We believe the strongest brands don't just participate in culture, they understand it. We build communications informed by the conversations, communities, and cultural shifts that shape how people think, feel, and act.' },
+  { title: 'Culture-Led', body: "We believe the strongest brands don't just participate in culture, they understand it. We build communications informed by the conversations, communities, and cultural shifts that shape how people think, feel, and act." },
   { title: 'Results-Measured', body: 'We track what actually matters to your brand — not just impressions, but the influence that moves the needle.' },
 ]
 
