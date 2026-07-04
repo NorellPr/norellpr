@@ -131,14 +131,14 @@ export default function Home() {
           whileInView="show"
           viewport={vp}
         >
-          {/* Card 1 — BeautybyAD */}
-          <MotionLink to="/work/beauty-by-ad" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
-            <img src="/beautybyAD/PTP08180-Recovered-Recovered.jpg" alt="BeautybyAD" fetchPriority="high" decoding="async"
+          {/* Card 1 — MomDates */}
+          <MotionLink to="/work/momdates" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
+            <img src="/momdate/momdate_campaign%20(3).jpeg" alt="MomDates" fetchPriority="high" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
-            <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100 flex flex-col justify-end p-7">
-              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Brand PR · 2025</div>
-              <div className="font-syne text-[clamp(18px,2.2vw,28px)] font-extrabold text-cream uppercase tracking-[-0.01em] translate-y-3 transition-transform duration-[400ms] delay-[50ms] group-hover:translate-y-0">BeautybyAD</div>
+            <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100 flex flex-col justify-end p-7">
+              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Campaign · 2025</div>
+              <div className="font-syne text-[clamp(18px,2.2vw,28px)] font-extrabold text-cream uppercase tracking-[-0.01em] translate-y-3 transition-transform duration-[400ms] delay-[50ms] group-hover:translate-y-0">MomDates</div>
               <div className="inline-flex items-center gap-[6px] mt-[10px] text-[11px] font-semibold text-cream/70 tracking-[0.06em] uppercase translate-y-3 transition-transform duration-[400ms] delay-100 group-hover:translate-y-0">
                 View Work
                 <svg className="w-3.5 h-3.5 stroke-cream" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -148,14 +148,14 @@ export default function Home() {
             </div>
           </MotionLink>
 
-          {/* Card 2 — MomDates */}
-          <MotionLink to="/work/momdates" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
-            <img src="/momdate/momdate_campaign%20(3).jpeg" alt="MomDates" loading="lazy" decoding="async"
+          {/* Card 2 — BeautybyAD */}
+          <MotionLink to="/work/beauty-by-ad" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 no-underline block">
+            <img src="/beautybyAD/PTP08180-Recovered-Recovered.jpg" alt="BeautybyAD" loading="lazy" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
-            <div className="absolute inset-0 bg-gradient-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100 flex flex-col justify-end p-7">
-              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Campaign · 2025</div>
-              <div className="font-syne text-[clamp(18px,2.2vw,28px)] font-extrabold text-cream uppercase tracking-[-0.01em] translate-y-3 transition-transform duration-[400ms] delay-[50ms] group-hover:translate-y-0">MomDates</div>
+            <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100 flex flex-col justify-end p-7">
+              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Brand PR · 2025</div>
+              <div className="font-syne text-[clamp(18px,2.2vw,28px)] font-extrabold text-cream uppercase tracking-[-0.01em] translate-y-3 transition-transform duration-[400ms] delay-[50ms] group-hover:translate-y-0">BeautybyAD</div>
               <div className="inline-flex items-center gap-[6px] mt-[10px] text-[11px] font-semibold text-cream/70 tracking-[0.06em] uppercase translate-y-3 transition-transform duration-[400ms] delay-100 group-hover:translate-y-0">
                 View Work
                 <svg className="w-3.5 h-3.5 stroke-cream" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
