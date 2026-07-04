@@ -109,10 +109,10 @@ export default function Layout() {
           <div>
             <div className="text-[9px] font-semibold tracking-[0.16em] uppercase text-cream/28 mb-4">Follow</div>
             <div className="flex flex-col gap-3">
-              <a href="#" className="text-[13px] text-cream no-underline opacity-50 transition-opacity hover:opacity-100 tracking-[0.02em]">
+              <a href="https://www.instagram.com/thisisnorell?igsh=ZTV4Z3lkODgyYjV0" target="_blank" rel="noopener noreferrer" className="text-[13px] text-cream no-underline opacity-50 transition-opacity hover:opacity-100 tracking-[0.02em]">
                 Instagram — @thisisnorell
               </a>
-              <a href="#" className="text-[13px] text-cream no-underline opacity-50 transition-opacity hover:opacity-100 tracking-[0.02em]">
+              <a href="https://www.linkedin.com/company/norell-public-relationss/" target="_blank" rel="noopener noreferrer" className="text-[13px] text-cream no-underline opacity-50 transition-opacity hover:opacity-100 tracking-[0.02em]">
                 LinkedIn — Norell Public Relations
               </a>
               <span className="text-[10px] font-semibold tracking-[0.12em] uppercase text-cream/28 mt-1.5">
