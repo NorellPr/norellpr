@@ -1,6 +1,6 @@
 // star mark only (textured 8-point star, no wordmark)
 export default function LogoMark({ variant = 'dark', size = 20, opacity = 1, className = '' }) {
-  const src = variant === 'dark' ? '/star-dark.png' : '/star-light.png'
+  const src = variant === 'dark' ? '/star-dark.webp' : '/star-light.webp'
   return (
     <img
       src={src}
