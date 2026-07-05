@@ -22,7 +22,7 @@ export function LogoFull({ variant = 'dark', height = 28, opacity = 1, className
       data={src}
       aria-label={opacity < 1 ? undefined : 'Norell PR'}
       aria-hidden={opacity < 1 ? 'true' : undefined}
-      style={{ height, width: 'auto', opacity, display: 'block', flexShrink: 0, pointerEvents: 'none' }}
+      style={{ height, width: 'auto', aspectRatio: '882 / 278', opacity, display: 'block', flexShrink: 0, pointerEvents: 'none' }}
       className={className}
     />
   )
