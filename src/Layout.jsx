@@ -66,7 +66,7 @@ export default function Layout() {
       {/* Sticky top navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-8 bg-cream/92 backdrop-blur-md max-md:py-3.5 max-md:px-3.5">
         <Link to="/" className="flex items-center no-underline">
-          <LogoFull variant="light" height={88} />
+          <LogoFull variant="light" height={44} />
         </Link>
 
         <button className="bg-transparent border-none cursor-pointer flex flex-col gap-1.5 p-1" onClick={toggleMenu}>
