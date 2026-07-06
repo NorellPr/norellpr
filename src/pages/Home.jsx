@@ -184,7 +184,7 @@ export default function Home() {
           <div className="text-[11px] tracking-[0.1em] uppercase text-cream/50">Intentional. Every campaign.</div>
         </motion.div>
         <motion.div variants={up} className="bg-cream border border-dark/10 rounded-[20px] py-[clamp(28px,4.5vh,52px)] px-[clamp(24px,3vw,44px)] flex flex-col gap-3">
-          <div className="font-syne text-[clamp(36px,5vw,72px)] font-extrabold text-dark leading-none tracking-[-0.03em]">Nigeria</div>
+          <div className="font-syne text-[clamp(36px,5vw,72px)] font-extrabold text-dark leading-none tracking-[-0.03em]">Africa</div>
           <div className="text-[11px] tracking-[0.1em] uppercase text-dark/50">Focused & Built for</div>
         </motion.div>
       </motion.div>
