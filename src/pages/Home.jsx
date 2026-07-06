@@ -215,7 +215,7 @@ export default function Home() {
       </div>
 
       {/* ── TESTIMONIAL ──────────────────────────────────────── */}
-      <motion.div
+      {/* <motion.div
         className="section bg-wine rounded-[20px] py-[clamp(48px,7vh,88px)] px-[clamp(28px,4vw,80px)] flex flex-col items-center text-center gap-7 relative overflow-hidden"
         variants={up}
         initial="hidden"
@@ -231,7 +231,7 @@ export default function Home() {
           <span className="text-[12px] font-semibold text-cream tracking-[0.08em] uppercase">Adaeze</span>
           <span className="text-[11px] text-cream/40 tracking-[0.08em] uppercase">BeautybyAD</span>
         </div>
-      </motion.div>
+      </motion.div> */}
     </>
   )
 }
