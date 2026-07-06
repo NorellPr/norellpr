@@ -89,7 +89,7 @@ export default function Work() {
             <div className="relative z-10">
               <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
               <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
-              <div className="text-cream/50 text-[13px] mt-3 leading-[1.65] italic">{moms.sub}</div>
+              <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">{moms.sub}</div>
             </div>
           </Link>
         </motion.div>
