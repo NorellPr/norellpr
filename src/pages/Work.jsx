@@ -17,7 +17,7 @@ const moms = {
   name: 'Momdates',
   year: '2026',
   tags: ['Partnership'],
-  sub: 'A community platform launch built on authentic connection over noise.',
+  sub: 'PARTNERSHIP . NIGERIA',
   logo: '/momdate/Momdates%20Logo%20(2).png',
 }
 

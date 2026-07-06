@@ -137,7 +137,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
             <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100 flex flex-col justify-end p-7">
-              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Campaign · 2026</div>
+              <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Brand PR · 2026</div>
               <div className="font-syne text-[clamp(18px,2.2vw,28px)] font-extrabold text-cream uppercase tracking-[-0.01em] translate-y-3 transition-transform duration-[400ms] delay-[50ms] group-hover:translate-y-0">MomDates</div>
               <div className="inline-flex items-center gap-[6px] mt-[10px] text-[11px] font-semibold text-cream/70 tracking-[0.06em] uppercase translate-y-3 transition-transform duration-[400ms] delay-100 group-hover:translate-y-0">
                 View Work
