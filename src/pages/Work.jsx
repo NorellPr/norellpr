@@ -7,7 +7,7 @@ const MotionLink = motion.create(Link)
 const beauty = {
   name: 'Beauty by aD',
   year: '2025',
-  tags: ['Brand Launch', 'Media Relations', 'Influencer Strategy'],
+  tags: ['Brand Launch', 'Influencer Partnerships'],
   sub: "A luxury product launch that made Africa's beauty industry take notice.",
   img: '/beautybyAD/PTP08250.webp',
   imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.webp',
@@ -16,7 +16,7 @@ const beauty = {
 const moms = {
   name: 'Momdates',
   year: '2026',
-  tags: ['Brand Communications', 'Digital PR', 'Platform Launch'],
+  tags: ['Partnership'],
   sub: 'A community platform launch built on authentic connection over noise.',
   logo: '/momdate/Momdates%20Logo%20(2).png',
 }
