@@ -153,7 +153,7 @@ export default function About() {
           <div className="text-[11px] tracking-widest uppercase text-cream/50">Intentional. Every campaign.</div>
         </motion.div>
         <motion.div variants={up} className="rounded-[20px] py-[clamp(28px,4.5vh,52px)] px-[clamp(24px,3vw,44px)] flex flex-col gap-3 bg-cream border border-dark/10">
-          <div className="font-syne text-[clamp(36px,5vw,72px)] font-extrabold text-dark leading-none tracking-[-0.03em]">Africa</div>
+          <div className="font-syne text-[clamp(36px,5vw,72px)] font-extrabold text-dark leading-none tracking-[-0.03em]">Nigeria</div>
           <div className="text-[11px] tracking-widest uppercase text-dark/50">Focused & Built for</div>
         </motion.div>
       </motion.div>

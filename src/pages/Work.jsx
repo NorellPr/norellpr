@@ -6,9 +6,9 @@ const MotionLink = motion.create(Link)
 
 const beauty = {
   name: 'Beauty by aD',
-  year: '2025',
+  year: '2026',
   tags: ['Brand Launch', 'Influencer Partnerships'],
-  sub: "A luxury product launch that made Africa's beauty industry take notice.",
+  sub: "A luxury product launch that made Nigeria's beauty industry take notice.",
   img: '/beautybyAD/PTP08250.webp',
   imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.webp',
 }
@@ -113,7 +113,7 @@ export default function Work() {
               <div>
                 <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{beauty.year}</div>
                 <div className="font-syne text-[clamp(18px,2.5vw,36px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{beauty.name}</div>
-                <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">Brand Launch · Africa</div>
+                <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">Brand Launch · Nigeria</div>
               </div>
             </div>
           </Link>
