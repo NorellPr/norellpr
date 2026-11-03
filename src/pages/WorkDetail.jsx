@@ -46,9 +46,40 @@ const clients = {
       { label: 'Year', value: '2026' },
     ],
   },
+  'momdates-marketplace': {
+    name: 'Momdates Marketplace by Momdates',
+    heading: 'Momdates Marketplace by Momdates',
+    images: [
+      '/momdates-marketplace/gallery-01.webp',
+      '/momdates-marketplace/gallery-02.webp',
+      '/momdates-marketplace/gallery-03.webp',
+      '/momdates-marketplace/gallery-04.webp',
+      '/momdates-marketplace/gallery-05.webp',
+      '/momdates-marketplace/gallery-06.webp',
+    ],
+    alts: [
+      'Two mothers holding their babies at the Toké Cosmetics stall, one holding a Toké paper bag',
+      'A toddler laughing as she slides down into the ball pit while a man and other children look on',
+      'Children and parents gathered around a stall table browsing colourful items',
+      'Shoppers browsing children\'s clothing at the BéBé Luxe stall under a green canopy',
+      'Two women smiling at the Laybes Clothings stall, one holding a Laybes shopping bag',
+      'Children playing in the ball pit, with a boy in a blue t-shirt smiling at the camera',
+    ],
+    description: [
+      'Momdates Marketplace was conceived as a family fun fair that brought shopping and entertainment together in one space. The idea was to create a one-stop shopping experience where families could discover and shop from a variety of brands while enjoying a fun-filled day of activities and experiences. Beyond shopping, the marketplace was designed to give families a reason to spend time together, creating an environment where entertainment and retail could exist seamlessly.',
+      'Norell PR worked across the planning and execution of the marketplace, helping translate the concept into a live experience. The event brought together vendors across parenting, baby care, wellness, fashion, lifestyle and food, alongside family-friendly activities designed to keep attendees engaged and make the day enjoyable for both adults and children.',
+      'Norell PR led brand partnerships and sponsorship coordination, identifying opportunities for brands to participate in the experience. The team also managed vendor engagement and participation, coordinating the different businesses that contributed to the marketplace and its one-stop shopping proposition.',
+      'Beyond the marketplace itself, Norell PR handled event communications, media relations and influencer partnerships to build awareness and extend the event’s reach. On-ground brand activations further created opportunities for participating brands to engage directly with attendees within the family fun fair environment.',
+      'The marketplace was successfully executed, bringing the vision of a shared family experience to life. By combining retail, entertainment, brand participation and community engagement, Momdates Marketplace created an environment where families could shop, explore and have fun together.',
+    ],
+    meta: [
+      { label: 'Client', value: 'Momdates' },
+      { label: 'Year', value: '2026' },
+    ],
+  },
 }
 
-function ImageGrid({ images, name, onZoom, onMouseMove, onMouseLeave }) {
+function ImageGrid({ images, alts, name, onZoom, onMouseMove, onMouseLeave }) {
   const handlers = (src) => ({ onClick: () => onZoom(src), onMouseMove, onMouseLeave })
 
   return (
@@ -62,7 +93,7 @@ function ImageGrid({ images, name, onZoom, onMouseMove, onMouseLeave }) {
         >
           <img
             src={src}
-            alt={name}
+            alt={alts?.[i] ?? name}
             decoding="async"
             fetchPriority={i === 0 ? 'high' : 'auto'}
             loading={i < 2 ? 'eager' : 'lazy'}
@@ -131,6 +162,7 @@ export default function WorkDetail() {
       {/* ── IMAGE GRID ── */}
       <ImageGrid
         images={client.images}
+        alts={client.alts}
         name={client.name}
         onZoom={setZoomed}
         onMouseMove={handleImgMouseMove}
