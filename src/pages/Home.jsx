@@ -164,10 +164,8 @@ export default function Home() {
               </div>
             </div>
           </MotionLink>
-        </motion.div>
-      </div>
 
-                {/* Card 3 — Momdates Marketplace */}
+          {/* Card 3 — Momdates Marketplace */}
           <MotionLink to="/work/momdates-marketplace" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 md:col-span-2 md:aspect-[21/9] no-underline block">
             <img src="/momdates-marketplace/cover.webp" alt="Momdates Marketplace by Momdates" loading="lazy" decoding="async"
               className="absolute inset-0 w-full h-full object-cover object-[50%_34%] transition-transform duration-500 group-hover:scale-[1.04]" />
@@ -183,6 +181,9 @@ export default function Home() {
               </div>
             </div>
           </MotionLink>
+        </motion.div>
+      </div>
+
 
       {/* ── STATS ────────────────────────────────────────────── */}
       <motion.div
