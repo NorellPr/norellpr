@@ -17,7 +17,7 @@ const moms = {
   name: 'Momdates',
   year: '2026',
   tags: ['Brand Event'],
-  sub: 'PARTNERSHIP . NIGERIA',
+  sub: 'Brand Event . NIGERIA',
   logo: '/momdate/Momdates%20Logo%20(2).png',
 }
 
