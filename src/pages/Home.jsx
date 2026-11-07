@@ -170,7 +170,7 @@ export default function Home() {
                 {/* Card 3 — Momdates Marketplace */}
           <MotionLink to="/work/momdates-marketplace" variants={up} className="group relative rounded-[20px] overflow-hidden bg-dark aspect-4/3 md:col-span-2 md:aspect-[21/9] no-underline block">
             <img src="/momdates-marketplace/cover.webp" alt="Momdates Marketplace by Momdates" loading="lazy" decoding="async"
-              className="absolute inset-0 w-full h-full object-cover object-[50%_10%] transition-transform duration-500 group-hover:scale-[1.04]" />
+              className="absolute inset-0 w-full h-full object-cover object-[50%_34%] transition-transform duration-500 group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-dark/50" />
             <div className="absolute inset-0 bg-linear-to-t from-wine/95 via-wine/40 to-transparent opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100 flex flex-col justify-end p-7">
               <div className="text-[9px] font-semibold tracking-[0.14em] uppercase text-cream/60 mb-[6px] translate-y-3 transition-transform duration-[400ms] group-hover:translate-y-0">Event · 2026</div>
