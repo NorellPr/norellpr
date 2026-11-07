@@ -81,24 +81,27 @@ export default function Work() {
         whileInView="show"
         viewport={vp}
       >
-        {/* Momdates */}
+       {/* Momdates Marketplace */}
         <motion.div variants={up}>
-          <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline block">
-            <img src="/momdate/momdate_campaign%20(2).webp" alt=""
-              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
-            <div className="absolute inset-0 bg-dark/55 pointer-events-none" />
-            <div className="flex items-start justify-between relative z-10">
-              <div className="flex flex-wrap gap-1.5">
-                {moms.tags.map((t, i) => <Tag key={i} label={t} light />)}
+          <Link to={`/work/${market.slug}`} className="relative rounded-[20px] overflow-hidden h-[62vh] max-md:h-[65vw] group no-underline block">
+            <img src={market.img} alt="Five people in matching Momdates Marketplace t-shirts standing in front of the Shop, Play, Eat, Connect event backdrop" loading="lazy" decoding="async"
+              className="w-full h-full object-cover object-[50%_10%] transition-transform duration-700 group-hover:scale-[1.03]" />
+            <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-b from-dark/55 to-transparent" />
+            <div className="absolute inset-0 p-7 flex flex-col justify-between">
+              <div className="flex items-start justify-between">
+                <div className="flex flex-wrap gap-1.5">
+                  {market.tags.map((t, i) => <Tag key={i} label={t} light />)}
+                </div>
+                <div className="w-8 h-8 rounded-full border border-cream/25 flex items-center justify-center shrink-0">
+                  <Arrow className="w-3 h-3 stroke-cream" />
+                </div>
               </div>
-              <div className="w-8 h-8 rounded-full border border-cream/20 flex items-center justify-center shrink-0">
-                <Arrow className="w-3 h-3 stroke-cream opacity-60" />
+              <div>
+                <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{market.year}</div>
+                <div className="font-syne text-[clamp(20px,2.6vw,38px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1.05] max-w-[22ch]">{market.name}</div>
+                <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">{market.sub}</div>
               </div>
-            </div>
-            <div className="relative z-10">
-              <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
-              <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
-              <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">{moms.sub}</div>
             </div>
           </Link>
         </motion.div>
@@ -128,31 +131,27 @@ export default function Work() {
           </Link>
         </motion.div>
 
-        {/* Momdates Marketplace */}
+        {/* Momdates */}
         <motion.div variants={up}>
-          <Link to={`/work/${market.slug}`} className="relative rounded-[20px] overflow-hidden h-[62vh] max-md:h-[65vw] group no-underline block">
-            <img src={market.img} alt="Five people in matching Momdates Marketplace t-shirts standing in front of the Shop, Play, Eat, Connect event backdrop" loading="lazy" decoding="async"
-              className="w-full h-full object-cover object-[50%_10%] transition-transform duration-700 group-hover:scale-[1.03]" />
-            <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
-            <div className="absolute inset-0 bg-linear-to-b from-dark/55 to-transparent" />
-            <div className="absolute inset-0 p-7 flex flex-col justify-between">
-              <div className="flex items-start justify-between">
-                <div className="flex flex-wrap gap-1.5">
-                  {market.tags.map((t, i) => <Tag key={i} label={t} light />)}
-                </div>
-                <div className="w-8 h-8 rounded-full border border-cream/25 flex items-center justify-center shrink-0">
-                  <Arrow className="w-3 h-3 stroke-cream" />
-                </div>
+          <Link to="/work/momdates" className="rounded-[20px] bg-wine h-[62vh] max-md:h-[68vw] relative overflow-hidden group flex flex-col justify-between p-8 no-underline block">
+            <img src="/momdate/momdate_campaign%20(2).webp" alt=""
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
+            <div className="absolute inset-0 bg-dark/55 pointer-events-none" />
+            <div className="flex items-start justify-between relative z-10">
+              <div className="flex flex-wrap gap-1.5">
+                {moms.tags.map((t, i) => <Tag key={i} label={t} light />)}
               </div>
-              <div>
-                <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{market.year}</div>
-                <div className="font-syne text-[clamp(20px,2.6vw,38px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-[1.05] max-w-[22ch]">{market.name}</div>
-                <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">{market.sub}</div>
+              <div className="w-8 h-8 rounded-full border border-cream/20 flex items-center justify-center shrink-0">
+                <Arrow className="w-3 h-3 stroke-cream opacity-60" />
               </div>
+            </div>
+            <div className="relative z-10">
+              <div className="text-cream/30 text-[10px] tracking-widest uppercase mb-2">{moms.year}</div>
+              <div className="font-syne text-[clamp(26px,3.5vw,52px)] font-extrabold text-cream uppercase tracking-[-0.02em] leading-none">{moms.name}</div>
+              <div className="text-[11px] text-cream/40 tracking-widest uppercase mt-2">{moms.sub}</div>
             </div>
           </Link>
         </motion.div>
-      </motion.div>
     </div>
   )
 }
