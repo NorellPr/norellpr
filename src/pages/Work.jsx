@@ -152,6 +152,7 @@ export default function Work() {
             </div>
           </Link>
         </motion.div>
+      </motion.div>
     </div>
   )
 }
