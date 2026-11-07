@@ -7,7 +7,7 @@ const MotionLink = motion.create(Link)
 const beauty = {
   name: 'Beauty by aD',
   year: '2026',
-  tags: ['Brand Launch', 'Influencer Partnerships'],
+  tags: ['Product Launch', 'Influencer Partnerships'],
   sub: "A luxury product launch that made Nigeria's beauty industry take notice.",
   img: '/beautybyAD/PTP08250.webp',
   imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.webp',
@@ -25,7 +25,7 @@ const market = {
   name: 'Momdates Marketplace by Momdates',
   year: '2026',
   tags: ['Event Experience', 'Brand Partnerships'],
-  sub: 'Event · Nigeria',
+  sub: 'Brand Event · Nigeria',
   img: '/momdates-marketplace/cover.webp',
   slug: 'momdates-marketplace',
 }
