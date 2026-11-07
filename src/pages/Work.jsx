@@ -8,7 +8,7 @@ const beauty = {
   name: 'Beauty by aD',
   year: '2026',
   tags: ['Product Launch'],
-  sub: "A luxury product launch that made Nigeria's beauty industry take notice.",
+   sub: 'Product Launch . NIGERIA',
   img: '/beautybyAD/PTP08250.webp',
   imgCampaign: '/beautybyAD/PTP08180-Recovered-Recovered.webp',
 }
